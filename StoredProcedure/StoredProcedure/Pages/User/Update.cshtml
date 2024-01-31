@@ -1,0 +1,17 @@
+﻿@page
+@model StoredProcedure.Pages.User.UpdateModel
+@{
+}
+
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.user.Id" />
+    <label>Name</label>
+    <input type="text" name="Name" value="@Model.user.Name" />
+
+    <label>Email</label>
+    <input type="email" name="Email" value="@Model.user.Email" />
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

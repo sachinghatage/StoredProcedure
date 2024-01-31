@@ -1,0 +1,9 @@
+﻿@page
+@using StoredProcedure.Models
+@inject IConfiguration configuration
+
+@{
+    DataAccessLayer dataAccessLayer = new DataAccessLayer();
+    long id=Convert.ToInt32(Request.Query["id"]);
+    dataAccessLayer.DeleteUser(id, configuration);
+}

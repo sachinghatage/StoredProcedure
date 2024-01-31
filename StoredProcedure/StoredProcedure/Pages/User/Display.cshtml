@@ -1,0 +1,35 @@
+﻿@page
+@model StoredProcedure.Pages.User.DisplayModel
+@{
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var user in Model.users)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>
+                        <a class="btn btn-primary" href="/User/Update?id=@user.Id">Edit</a>
+                        <a class="btn btn-danger" href="/User/Delete?id=@user.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+
+
+
+       
+    </tbody>
+</table>
